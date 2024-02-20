@@ -103,3 +103,5 @@ if (favouriteNumber == 23) {
   console.log(`${favouriteNumber} 24 is nice 😀`);
 }
 */
+
+/** */
