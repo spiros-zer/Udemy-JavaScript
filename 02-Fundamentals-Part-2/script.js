@@ -128,3 +128,10 @@ console.log(spirosTwin.calcAge());
 
 // challenge
 console.log(spirosTwin.getSummary());
+
+/** Looping Arrays, Breaking and Continuing */
+const spirosArray = ["Spiros", "Zervos", 2037 - 1996, "programmer", friends];
+
+for (let i = 0; i < spirosArray.length; i++) {
+  console.log(spirosArray[i]);
+}
