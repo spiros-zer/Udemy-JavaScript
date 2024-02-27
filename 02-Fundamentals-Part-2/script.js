@@ -102,3 +102,29 @@ console.log(spiros["first" + nameKey]);
 // challenge
 const challengeStr = `${spiros.firstName} has ${spiros.friends.length} friends, and his best friend is called ${spiros.friends[0]}.`;
 console.log(challengeStr);
+
+/** OBJECT METHODS */
+const spirosTwin = {
+  firstName: "Spiros",
+  lastName: "Zervos",
+  birthYear: 1996,
+  job: "programmer",
+  friends: friends,
+  hasDriversLicense: true,
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear; //declaring an attribute inside the object method
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${spiros.firstName} is a ${spiros.age}-year old ${
+      spiros.job
+    } and he has ${spiros.hasDriversLicense ? "a" : "no"} driver's license.`;
+  },
+};
+
+console.log(spirosTwin.calcAge());
+
+// challenge
+console.log(spirosTwin.getSummary());
