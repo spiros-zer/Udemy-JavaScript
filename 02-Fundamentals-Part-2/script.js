@@ -4,16 +4,16 @@
 let hasDriversLicense = false;
 const passTest = true;
 
+//undefined variable bug
+/*
 if (passTest) {
   hasDriverLicense = true;
 }
+*/
 
-//undefined variable bug
-/*
 if (hasDriversLicense) {
   console.log("I can drive :D");
 }
-*/
 
 //reserved word bug
 /*
@@ -93,3 +93,12 @@ const spiros = {
   job: "programmer",
   friends: friends,
 };
+
+console.log(spiros.firstName);
+
+const nameKey = "Name";
+console.log(spiros["first" + nameKey]);
+
+// challenge
+const challengeStr = `${spiros.firstName} has ${spiros.friends.length} friends, and his best friend is called ${spiros.friends[0]}.`;
+console.log(challengeStr);
