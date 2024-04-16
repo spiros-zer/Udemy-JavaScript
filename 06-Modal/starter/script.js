@@ -29,7 +29,6 @@ overlayElement.addEventListener("click", closeModal);
 /** On Esc pressed close modal if visible */
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape" && !modalElement.classList.contains("hidden")) {
-      closeModal();
-    }
+    closeModal();
   }
 }); // this fires the event whenever a keydown event happens in the document
