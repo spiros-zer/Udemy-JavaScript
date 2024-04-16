@@ -22,4 +22,14 @@ for (let i = 0; i < btnsShowModal[i].clientHeight; i++) {
 }
 
 btnCloseModal.addEventListener("click", closeModal);
+
+/** On overlay clicked close modal */
 overlayElement.addEventListener("click", closeModal);
+
+/** On Esc pressed close modal if visible */
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && !modalElement.classList.contains("hidden")) {
+      closeModal();
+    }
+  }
+}); // this fires the event whenever a keydown event happens in the document
