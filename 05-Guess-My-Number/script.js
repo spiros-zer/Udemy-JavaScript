@@ -43,21 +43,17 @@ btnCheck.addEventListener("click", function () {
     bodyElement.style.backgroundColor = "#60b347";
     numberElement.style.width = "30rem";
     messageElement.textContent = "🎉 Correct Number";
-  } else if (guess > secretNumber) {
-    if (score) {
-      messageElement.textContent = "📈 Too High!";
-      score--;
-      scoreElement.textContent = score;
-    } else {
-      messageElement.textContent = "💥 You lost!";
-    }
   } else {
     if (score) {
-      messageElement.textContent = "📉 Too Low!";
-      score--;
-      scoreElement.textContent = score;
+      messageElement.textContent =
+        guess > secretNumber ? "📈 Too High!" : "📉 Too Low!";
+      if (score) {
+        score--;
+        scoreElement.textContent = score;
+      }
     } else {
       messageElement.textContent = "💥 You lost!";
+      scoreElement.textContent = "0";
     }
   }
 });
