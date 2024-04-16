@@ -1,6 +1,7 @@
 "use strict";
 
 /// DOM element init
+const bodyElement = document.querySelector("body");
 const messageElement = document.querySelector(".message");
 const inputElement = document.querySelector(".guess");
 const scoreElement = document.querySelector(".score");
@@ -18,6 +19,8 @@ btnCheck.addEventListener("click", function () {
   if (!guess) {
     messageElement.textContent = "🚫 No Number!";
   } else if (guess === secretNumber) {
+    bodyElement.style.backgroundColor = "#60b347";
+    numberElement.style.width = "30rem";
     messageElement.textContent = "🎉 Correct Number";
   } else if (guess > secretNumber) {
     if (score) {
