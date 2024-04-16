@@ -6,6 +6,7 @@ const messageElement = document.querySelector(".message");
 const inputElement = document.querySelector(".guess");
 const scoreElement = document.querySelector(".score");
 const numberElement = document.querySelector(".number");
+const highscoreElement = document.querySelector(".highscore");
 const btnCheck = document.querySelector(".check");
 const btnAgain = document.querySelector(".again");
 ///
@@ -13,6 +14,7 @@ const btnAgain = document.querySelector(".again");
 /** Number that needs to be guessed */
 let secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 20;
+let highScore = 0;
 
 /** On btn Again! clicked */
 btnAgain.addEventListener("click", function () {
@@ -34,6 +36,10 @@ btnCheck.addEventListener("click", function () {
   if (!guess) {
     messageElement.textContent = "🚫 No Number!";
   } else if (guess === secretNumber) {
+    if (score > highScore) {
+      highScore = score;
+      highscoreElement.textContent = highScore;
+    }
     bodyElement.style.backgroundColor = "#60b347";
     numberElement.style.width = "30rem";
     messageElement.textContent = "🎉 Correct Number";
