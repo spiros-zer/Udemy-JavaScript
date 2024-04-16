@@ -2,7 +2,7 @@
 
 /// DOM element init
 const messageElement = document.querySelector(".message");
-const inputElement = document.querySelector(".number");
+const inputElement = document.querySelector(".guess");
 const scoreElement = document.querySelector(".score");
 const numberElement = document.querySelector(".number");
 const btnCheck = document.querySelector(".check");
